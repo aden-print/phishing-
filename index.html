@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook - Inicia sesión o regístrate</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+    .logo {
+      font-size: 2rem;
+      color: #1877f2;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .warning {
+      margin-top: 20px;
+      color: red;
+      font-weight: bold;
+      display: none;
+    }
+    .note {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">facebook</div>
+    <input type="text" placeholder="Correo o número de teléfono" id="email">
+    <input type="password" placeholder="Contraseña" id="password">
+    <button onclick="simulatePhishing()">Iniciar sesión</button>
+    <div class="warning" id="warning">¡Alerta! Esta es una página falsa de ejemplo. Podrías haber sido víctima de phishing.</div>
+    <div class="note">Esta interfaz es solo para fines educativos.</div>
+  </div>
+  <script>
+    function simulatePhishing() {
+      const warning = document.getElementById("warning");
+      warning.style.display = "block";
+    }
+  </script>
+</body>
+</html>
